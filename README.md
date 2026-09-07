@@ -22,3 +22,11 @@ For more information about the Snort Licenses, please visit [this link](https://
 ### Why should you use Snort?
 Snort has a community version which can be used for free, this means that it can be tested for its feasibility before choosing whether to adopt it within a business – this can save money for your business as money is not wasted on an IPS that you may not want to use in the end. Furthermore, as it is maintained by a larger company (CISCO), so larger businesses can benefit from faster updates to rulesets by subscribing – as it is developed in house and is not made by the community.
 
+### Prerequisites
+- Virtualbox Ubuntu Installation
+    - 8GB RAM (Recommended)
+        - 4GB RAM (Minimum)
+    - 4 CPU Cores
+    - 25GB Storage
+
+Further reading and documentation can be found on the [Snort Manuals](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/) (Snort, 2025c)
