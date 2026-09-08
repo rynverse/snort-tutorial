@@ -114,3 +114,54 @@ Now, we want to change the `HOME_NET` variable to the IP address of our homenet 
 ![An example HOME_NET Variable](/images/fig7.png)
 
 You can add/modify more rules by adding/removing comments, see the documentation for that [here](https://docs.snort.org/rules/) (Snort, 2025d)
+
+### 5) Test Snort
+To test Snort, run the command `sudo snort -T enp0s3`
+This runs Snort on the interface `enp0s3`, which is where we got our IP Address from.
+You should get the result below (figure 8):
+
+![An example test result from Snort](/images/fig8.png)
+
+This also tells use if the configuration was validated.
+
+### Running Snort
+Here I will go over 3 uses of Snort.
+**Snort should only be used responsibility, with permission of both parties and you must follow the laws of your jurisdiction, and relevent ethics codes**
+
+#### Snort as a Packet Sniffer
+To sniff packets using Snort, run the command `sudo snort -v`. You can find an example packet below (figure 9,10):
+
+![An example caught packet](/images/fig9.png)
+
+![The results after running Snort as a packet sniffer](/images/fig10.png)
+
+To find more about using Snort as a packet sniffer, follow the link [here](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node4.html) (Snort, 2025e)
+
+#### Snort for Logging Packets
+Firstly, we need to `cd` into our `var` folder, do this by running the command `cd /var`.
+Now, create a `snort` directory using the command `sudo mkdir snort`. 
+Check this has been completed successfully by running `ls`. (See below, figure 11)
+
+![Snort directory inside /var](/images/fig11.png)
+
+Now, we want to configure Snort to log the packets it detects into this new directory, so run the command `sudo snort -dev -l var/snort/log`
+You should now see the give output (figure 12):
+
+![Snort in Packet Logging Mode](/images/fig12.png)
+
+Visit a website (or websites) of your choice, and once you are done press *ctrl + c* to stop logging packets. You should get the statistics, for example (figure 13):
+
+![Example Packet Logging Statistics](/images/fig13.png)
+
+Let's check if our log has been saved, run the command `cd /var/snort` and you should be able to find the following file (figure 14):
+
+![Log inside the directory](/images/fig14.png)
+
+To open this log file (or any other) in the future, we can run the command `sudo snort -r [FILE_NAME]` (see example below, figure 15):
+
+![Example Log file loaded](/images/fig15.png)
+
+Further documentation for packet logging mode can be found [here](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html) (Snort, 2025f)
+
+
+
