@@ -163,5 +163,22 @@ To open this log file (or any other) in the future, we can run the command `sudo
 
 Further documentation for packet logging mode can be found [here](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html) (Snort, 2025f)
 
+### What alternatives are there to Snort?
+As mentioned in the overview, alternatives such as `tcpdump` do exist for snort. `tcpdump` is an alternative packet sniffer/logger which can also be used in Debian, which (handily) is included in a few Linux distributions already. It is also easier to set up and run compared to `snort` as a result – requiring less configuration and manual intervention. However, this does come at the cost of versatility, `snort` can perform much more than packet sniffing and logging, with the trade-off being complexity.
+
+Further documentation on `tcpdump` can be found [here](https://www.tcpdump.org/manpages/tcpdump.1.html) (TCPDump,2025)
+
+### References
+Cox, K. and Gerg, C. (2004) ‘Managing Security with Snort and IDS Tools’ (Beijing; Cambridge: O'Reilly)
+Gluttony777 (2022) ‘What is SNORT?’ GeeksforGeeks. Available at: https://www.geeksforgeeks.org/computer-networks/what-is-snort/ (Accessed 05 January 2026)
+Snort (2025a) ‘What is Snort?’ Available at: https://www.snort.org/ (Accessed 05 January 2026)
+Snort (2025b) ‘License’ Available at: https://www.snort.org/license (Accessed 05 January 2026)
+Snort (2025c) ‘SNORT® Users Manual 2.9.16’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/ (Accessed 05 January 2026)
+Snort (2025d) ‘Snort 3 Rule Writing Guide’ Available at: https://docs.snort.org/rules/ (Accessed 05 January 2026)
+Snort (2025e) ‘1.2 Sniffer Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node4.html (Accessed 05 January 2026)
+Snort (2025f) ‘1.3 Packet Logger Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
+TCPDump (2025) ‘TCPDUMP(1) MAN PAGE’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
+
+
 
 
