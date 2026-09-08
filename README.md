@@ -92,8 +92,25 @@ In human terms, we can break this down into Streets and Addresses:
 - For the example given `10.0.2.15` we can say: "I am on the street `10.0.2` and my address is `.15`
 - What we are doing by putting `/24` in Snort, is saying "I want to read all mail from addresses `.0-.255` on street `10.0.2`
 
+### 4) Configure Snort
+With Snort installed, we need to configure it to our own needs. To do this, run the command `ls -al /etc/snort`.
+This command does the following:
+`ls /etc/snort` lists all the directories within `/etc/snort`
+`-al` lists all the directories and **dotfiles** (hidden files) as well as their permission and ownership.
 
+You should see the below (Figure 5):
 
+![The /etc/snort Directory](/images/fig5.png)
 
+The snort.conf file contains snort configuration rules for home IPs and external IPs, and allows us to define where we should get our rules from - we can change this to create our own custom rules for it to follow.
 
+To open the `snort.conf` file, run the command `sudo nano /etc/snort/snort.conf`. You should see the below (Figure 6)
+`nano` is the file editor we will be using to change the configuration.
 
+![The beginning of the snort.conf file](/images/fig6.png)
+
+Now, we want to change the `HOME_NET` variable to the IP address of our homenet **(with /24)**, for example `10.0.2.0/24`
+
+![An example HOME_NET Variable](/images/fig7.png)
+
+You can add/modify more rules by adding/removing comments, see the documentation for that [here](https://docs.snort.org/rules/) (Snort, 2025d)
