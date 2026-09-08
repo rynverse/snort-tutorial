@@ -102,7 +102,7 @@ You should see the below (Figure 5):
 
 ![The /etc/snort Directory](/images/fig5.png)
 
-The snort.conf file contains snort configuration rules for home IPs and external IPs, and allows us to define where we should get our rules from - we can change this to create our own custom rules for it to follow.
+The snort.conf file contains snort configuration rules for home IPs and external IPs, and allows us to define where we should get our rules from - we can change this to create our own custom rules for it to follow. You can use my `snort.conf` file found in the repository, or your own.
 
 To open the `snort.conf` file, run the command `sudo nano /etc/snort/snort.conf`. You should see the below (Figure 6)
 `nano` is the file editor we will be using to change the configuration.
@@ -169,15 +169,15 @@ As mentioned in the overview, alternatives such as `tcpdump` do exist for snort.
 Further documentation on `tcpdump` can be found [here](https://www.tcpdump.org/manpages/tcpdump.1.html) (TCPDump,2025)
 
 ### References
-Cox, K. and Gerg, C. (2004) ‘Managing Security with Snort and IDS Tools’ (Beijing; Cambridge: O'Reilly)
-Gluttony777 (2022) ‘What is SNORT?’ GeeksforGeeks. Available at: https://www.geeksforgeeks.org/computer-networks/what-is-snort/ (Accessed 05 January 2026)
-Snort (2025a) ‘What is Snort?’ Available at: https://www.snort.org/ (Accessed 05 January 2026)
-Snort (2025b) ‘License’ Available at: https://www.snort.org/license (Accessed 05 January 2026)
-Snort (2025c) ‘SNORT® Users Manual 2.9.16’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/ (Accessed 05 January 2026)
-Snort (2025d) ‘Snort 3 Rule Writing Guide’ Available at: https://docs.snort.org/rules/ (Accessed 05 January 2026)
-Snort (2025e) ‘1.2 Sniffer Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node4.html (Accessed 05 January 2026)
-Snort (2025f) ‘1.3 Packet Logger Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
-TCPDump (2025) ‘TCPDUMP(1) MAN PAGE’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
+- Cox, K. and Gerg, C. (2004) ‘Managing Security with Snort and IDS Tools’ (Beijing; Cambridge: O'Reilly)
+- Gluttony777 (2022) ‘What is SNORT?’ GeeksforGeeks. Available at: https://www.geeksforgeeks.org/computer-networks/what-is-snort/ (Accessed 05 January 2026)
+- Snort (2025a) ‘What is Snort?’ Available at: https://www.snort.org/ (Accessed 05 January 2026)
+- Snort (2025b) ‘License’ Available at: https://www.snort.org/license (Accessed 05 January 2026)
+- Snort (2025c) ‘SNORT® Users Manual 2.9.16’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/ (Accessed 05 January 2026)
+- Snort (2025d) ‘Snort 3 Rule Writing Guide’ Available at: https://docs.snort.org/rules/ (Accessed 05 January 2026)
+- Snort (2025e) ‘1.2 Sniffer Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node4.html (Accessed 05 January 2026)
+- Snort (2025f) ‘1.3 Packet Logger Mode’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
+- TCPDump (2025) ‘TCPDUMP(1) MAN PAGE’ Available at: http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node5.html (Accessed 05 January 2026)
 
 
 
