@@ -30,3 +30,26 @@ Snort has a community version which can be used for free, this means that it can
     - 25GB Storage
 
 Further reading and documentation can be found on the [Snort Manuals](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/) (Snort, 2025c)
+
+### 1) Ensure Everything is Up-to-date
+Firstly, we want to make sure our software and packages are up to date. To do this, run the command ``sudo apt update && sudo apt upgrade``.
+``sudo apt update`` Gets an updated record (catalog) of packages on your system, and makes you aware of whether they need to be updated/installed/removed
+``sudo apt upgrade`` Acts on the record's instructions
+The ``&&`` allows us to run two commands without having to type them out individually
+
+When prompted, press `Y` and enter to continue.
+
+An example can be found below (Figure 1):
+
+![An example screenshot after running both bommands](/images/fig1.png)
+
+### 2) Install and use ifconfig (for older systems)
+NOTE: `net-tools (ifconfig)` is depreciated, and has been replaced by `iproute2`, seperate instructions for that can be found below `(b)`, but if you want to use `net-tools (ifconfig)` follow `(a)`
+
+(a) Run the command `sudo apt install net-tools`
+
+Once complete, run the command `ifconfig` to find your IP address, typically this is found next to the `enp0s3`. See Below:
+
+![An example image of me running `ifconfig`](/images/fig2.png)
+
+(b) `iproute2` should be installed by default, so simply run the command `ip addr`and you should get a result similar to the above
