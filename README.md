@@ -48,8 +48,52 @@ NOTE: `net-tools (ifconfig)` is depreciated, and has been replaced by `iproute2`
 
 (a) Run the command `sudo apt install net-tools`
 
-Once complete, run the command `ifconfig` to find your IP address, typically this is found next to the `enp0s3`. See Below:
+Once complete, run the command `ifconfig` to find your IP address, typically this is found next to the `enp0s3`. See Below (Figure 2):
 
 ![An example image of me running `ifconfig`](/images/fig2.png)
 
 (b) `iproute2` should be installed by default, so simply run the command `ip addr`and you should get a result similar to the above
+
+Now, note down the IP address of our machine. In my case, it would be `10.0.2.15`
+
+NOTE: The IP address `127.0.0.1` is also for ourself, but is only for applications that need to callback. So you do not need to worry about this.
+
+### 3) Install Snort
+Now we want to install Snort. Run the command `sudo apt-get install snort -y`.
+This command is similar to the one we used before for `net-tools`, but `-y` parameter says yes to the prompts  we are given automatically.
+
+Now, you should get a prompt like shown below. You want to enter the IP Address you were given before, however the last decimal should be `0`, and then add `/24`. For example, my example from before would become `10.0.2.0/24`. See below (Figure 3)
+
+__For further explanation of the /24, see the bottom of this instruction.__
+
+![An example of me putting 10.0.2.0/24 when prompted](/images/fig3.png)
+
+Now that we have given our network addresses, you should see the following output:
+
+![The result after installing Snort](/images/fig4.png)
+
+#### **Further explanation of the /24**
+Firstly, we will need to understand what an IP Address looks like in binary, for example `255.255.255.255`.
+| First 8 Bits | Second 8 Bits | Third 8 Bits |  Fourth 8 Bits | 
+| ------------- | ------------- | ------------- | ------------- |
+| `11111111` | `11111111` | `11111111` | `11111111` |
+
+Each bit reads right to left, see below how to write `255` in binary:
+| 128 | 64 | 32 |  16 | 8 | 4 | 2 |  1 | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **1** | **1** | **1** | **1** | **1** | **1** | **1** | **1** |
+
+Now, when we use a **subnet mask** (i.e /24). We say that the first 24 bits are used to identify the network.
+Because the first 24 bits are used to identify the network, the last 8 bits can be used to find the specific device.
+
+The last 8 Bits can add up to 256, so __in theory__ we can have up to 256 devices on a network. However, `x.x.x.1` is usually reserved for a router.
+
+In human terms, we can break this down into Streets and Addresses: 
+- For the example given `10.0.2.15` we can say: "I am on the street `10.0.2` and my address is `.15`
+- What we are doing by putting `/24` in Snort, is saying "I want to read all mail from addresses `.0-.255` on street `10.0.2`
+
+
+
+
+
+
